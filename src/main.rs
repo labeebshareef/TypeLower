@@ -8,13 +8,13 @@ fn main() {
 
     let mut lexer = Lexer::new(source);
 
-    // loop {
+    loop {
         let token = lexer.next_token();
 
         println!("{:?}", token);
 
-        // if token.token_type == TokenType::EOF {
-        //     break;
-        // }
-    // }
+        if token.token_type == TokenType::EOF {
+            break;
+        }
+    }
 }
